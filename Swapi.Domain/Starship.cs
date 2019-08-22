@@ -15,9 +15,7 @@ namespace Swapi.Domain
                 return null;
             }
 
-            return Consumables.HasValue
-                ? (long?) (distanceInMglt / Mglt / Consumables.GetValueOrDefault().TotalHours)
-                : null;
+            return (long?) (distanceInMglt / Mglt / Consumables.GetValueOrDefault().TotalHours);
         }
     }
 }
