@@ -8,12 +8,12 @@ namespace Swapi.Core
         public long? Mglt { get; set; }
         public TimeSpan? Consumables { get; set; }
 
-        public long? AmmountOfStops(long distanceInMglt)
+        public string AmmountOfStops(long distanceInMglt)
         {
-            if (!Mglt.HasValue || Mglt == 0 || Consumables.GetValueOrDefault(TimeSpan.Zero) == TimeSpan.Zero)
-                return null;
+            if (!Mglt.HasValue || Mglt == 0 || Consumables.GetValueOrDefault() == TimeSpan.Zero)
+                return "unknown";
 
-            return (long?) (distanceInMglt / Mglt / Consumables.GetValueOrDefault().TotalHours);
+            return ((long) (distanceInMglt / Mglt / Consumables.GetValueOrDefault().TotalHours)).ToString();
         }
     }
 }

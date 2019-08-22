@@ -7,7 +7,7 @@ using AutoMapper;
 
 namespace Swapi.Core
 {
-    public class SwapiGateway : ISwapiGateway
+    public class SwapiGateway
     {
         private static readonly HttpClient HttpClient = new HttpClient();
         private readonly IMapper _mapper;

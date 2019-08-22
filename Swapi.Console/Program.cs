@@ -6,19 +6,23 @@ namespace Swapi.Console
 {
     internal class Program
     {
-        private static async Task Main(string[] args)
+        // ReSharper disable once AsyncConverter.AsyncMethodNamingHighlighting
+        private static async Task Main()
         {
-            ISwapiGateway swapiGateway = new SwapiGateway(AutoMapperConfig.Config());
+            var starshipService = new StarshipService(AutoMapperConfig.Config());
 
-            var starships = await swapiGateway.GetStarshipsAsync();
+            System.Console.Write("Please type the distance in MGLU: [Default: 1000000] ");
+            var input = System.Console.ReadLine();
+            System.Console.WriteLine();
 
-            if (args.Length != 1 || !long.TryParse(args[0], out var distanceInMglu)) distanceInMglu = 1_000_000L;
+            if (!long.TryParse(input, out var distanceInMglu)) distanceInMglu = 1_000_000L;
+
+            System.Console.WriteLine("Calculating for the distance {0}.", distanceInMglu);
+
+            var starships = await starshipService.ListStarshipsAndStopsAsync(distanceInMglu);
 
             foreach (var starship in starships)
-            {
-                var ammountOfStops = starship.AmmountOfStops(distanceInMglu)?.ToString() ?? "unknown";
-                System.Console.WriteLine("{0, -30}{1, 10}", starship.Name, ammountOfStops);
-            }
+                System.Console.WriteLine("{0, -30}{1, 10}", starship.Name, starship.Stops);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Swapi.Tests
     public class StarshipTest
     {
         [Fact]
-        [Description("AmmoutOfStops must return null if MGLT, Consumables are null or zero.")]
+        [Description("AmmoutOfStops must return unknown if MGLT, Consumables are null or zero.")]
         public void AmmountOfStops_MustReturnNullWhenStarshipDataIsInvalid()
         {
             var starship = new Starship
@@ -18,7 +18,7 @@ namespace Swapi.Tests
                 Mglt = 0
             };
 
-            Assert.Null(starship.AmmountOfStops(1_000_000));
+            Assert.Equal("unknown", starship.AmmountOfStops(1_000_000));
         }
     }
 }
