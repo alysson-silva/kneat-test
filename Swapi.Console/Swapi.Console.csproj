@@ -9,8 +9,6 @@
     <ItemGroup>
       <ProjectReference Include="..\Swapi.AutoMapper\Swapi.AutoMapper.csproj" />
       <ProjectReference Include="..\Swapi.Core\Swapi.Core.csproj" />
-      <ProjectReference Include="..\Swapi.Domain\Swapi.Domain.csproj" />
-      <ProjectReference Include="..\Swapi.Integration.Spec\Swapi.Integration.Spec.csproj" />
     </ItemGroup>
 
 </Project>
