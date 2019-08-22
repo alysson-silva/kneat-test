@@ -2,20 +2,25 @@ using System;
 using System.Linq;
 using AutoMapper;
 
-namespace Swapi.Console.AutoMapper.Converters
+namespace Swapi.CrossCutting.AutoMapper.Converters
 {
-    public class StringToTimeSpanConverter : ITypeConverter<string, TimeSpan>
+    public class StringToTimeSpanConverter : ITypeConverter<string, TimeSpan?>
     {
-        public TimeSpan Convert(string source, TimeSpan destination, ResolutionContext context)
+        public TimeSpan? Convert(string source, TimeSpan? destination, ResolutionContext context)
         {
+            if ("unknown".Equals(source))
+            {
+                return null;
+            }
+
             var number = long.Parse(source.Split(" ").First());
             var range = source.Split(" ").Last();
-            return AddFunction(range)(number);
+            return ToTimeSpanFunction(range)(number);
         }
 
-        private static Func<double, TimeSpan> AddFunction(string range)
+        private static Func<double, TimeSpan> ToTimeSpanFunction(string range)
         {
-            switch (range)
+            switch (range.ToLower())
             {
                 case "year":
                 case "years":
@@ -29,6 +34,9 @@ namespace Swapi.Console.AutoMapper.Converters
                 case "day":
                 case "days":
                     return TimeSpan.FromDays;
+                case "hour":
+                case "hours":
+                    return TimeSpan.FromHours;
                 default:
                     throw new NotImplementedException();
             }

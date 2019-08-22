@@ -1,7 +1,7 @@
 using System;
 using AutoMapper;
 
-namespace Swapi.Console.AutoMapper.Converters
+namespace Swapi.CrossCutting.AutoMapper.Converters
 {
     public class StringToUriTypeConverter : ITypeConverter<string, Uri>
     {

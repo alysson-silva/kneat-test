@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using AutoMapper;
 using Swapi.Integration.Spec;
+using Starship = Swapi.Domain.Starship;
 
 namespace Swapi.Integration.Impl
 {
@@ -22,13 +23,24 @@ namespace Swapi.Integration.Impl
             HttpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<IEnumerable<Domain.Starship>> GetStarshipsAsync()
+        public async Task<IEnumerable<Starship>> GetStarshipsAsync()
         {
-            var response = await HttpClient.GetAsync("starships");
-            response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadAsAsync<ListWrapper<Starship>>();
+            var starships = new List<Spec.Starship>();
 
-            return _mapper.Map<List<Domain.Starship>>(data.Results);
+            await GetAllPagesAsync("starships", starships);
+
+            return _mapper.Map<List<Starship>>(starships);
+        }
+
+        private static async Task GetAllPagesAsync<T>(string requestUri, List<T> list) where T : class
+        {
+            var response = await HttpClient.GetAsync($"{requestUri}");
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadAsAsync<ListWrapper<T>>();
+
+            list.AddRange(data.Results);
+
+            if (data.Next != null) await GetAllPagesAsync(data.Next, list);
         }
     }
 }

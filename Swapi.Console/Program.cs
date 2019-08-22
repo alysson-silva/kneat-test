@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Swapi.CrossCutting;
 using Swapi.Integration.Impl;
 using Swapi.Integration.Spec;
 
@@ -8,15 +9,19 @@ namespace Swapi.Console
     {
         private static async Task Main(string[] args)
         {
-            ISwapiGateway swapiGateway  = new SwapiGateway(AutoMapperConfig.Config());
+            ISwapiGateway swapiGateway = new SwapiGateway(AutoMapperConfig.Config());
 
             var starships = await swapiGateway.GetStarshipsAsync();
 
+            if (args.Length != 1 || !long.TryParse(args[0], out var distanceInMglu))
+            {
+                distanceInMglu = 1_000_000L;
+            }
+
             foreach (var starship in starships)
             {
-                System.Console.Write(starship.Name);
-                System.Console.Write(" ");
-                System.Console.WriteLine(starship.AmmountOfStops(1_000_000));
+                var ammountOfStops = starship.AmmountOfStops(distanceInMglu)?.ToString() ?? "unknown";
+                System.Console.WriteLine("{0, -30}{1, 10}", starship.Name, ammountOfStops);
             }
         }
     }

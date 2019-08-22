@@ -5,12 +5,19 @@ namespace Swapi.Domain
     public class Starship
     {
         public string Name { get; set; }
-        public long Mglt { get; set; }
-        public TimeSpan Consumables { get; set; }
+        public long? Mglt { get; set; }
+        public TimeSpan? Consumables { get; set; }
 
-        public long AmmountOfStops(long distanceInMglt)
+        public long? AmmountOfStops(long distanceInMglt)
         {
-            return (long) (distanceInMglt / Mglt / Consumables.TotalHours);
+            if (!Mglt.HasValue || Mglt == 0 || Consumables.GetValueOrDefault(TimeSpan.Zero) == TimeSpan.Zero)
+            {
+                return null;
+            }
+
+            return Consumables.HasValue
+                ? (long?) (distanceInMglt / Mglt / Consumables.GetValueOrDefault().TotalHours)
+                : null;
         }
     }
 }

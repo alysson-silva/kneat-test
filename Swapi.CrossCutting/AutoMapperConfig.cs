@@ -1,7 +1,7 @@
 using AutoMapper;
-using Swapi.Console.AutoMapper.Profiles;
+using Swapi.CrossCutting.AutoMapper.Profiles;
 
-namespace Swapi.Console
+namespace Swapi.CrossCutting
 {
     public static class AutoMapperConfig
     {

@@ -4,12 +4,21 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <LangVersion>8</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
-    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.msbuild" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Swapi.CrossCutting\Swapi.CrossCutting.csproj" />
+    <ProjectReference Include="..\Swapi.Domain\Swapi.Domain.csproj" />
+    <ProjectReference Include="..\Swapi.Integration.Impl\Swapi.Integration.Impl.csproj" />
+    <ProjectReference Include="..\Swapi.Integration.Spec\Swapi.Integration.Spec.csproj" />
   </ItemGroup>
 
 </Project>

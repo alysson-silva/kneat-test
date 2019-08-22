@@ -1,8 +1,8 @@
 using System;
 using AutoMapper;
-using Swapi.Console.AutoMapper.Converters;
+using Swapi.CrossCutting.AutoMapper.Converters;
 
-namespace Swapi.Console.AutoMapper.Profiles
+namespace Swapi.CrossCutting.AutoMapper.Profiles
 {
     public class ListWrapperProfile : Profile
     {

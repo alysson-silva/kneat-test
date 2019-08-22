@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.Integration.Spec", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.Integration.Impl", "Swapi.Integration.Impl\Swapi.Integration.Impl.csproj", "{5D0882D2-2063-49D0-8DED-CA3F667438E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.CrossCutting", "Swapi.CrossCutting\Swapi.CrossCutting.csproj", "{E65B19FB-6BBC-4C38-9D20-7E5E0BBA311C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5D0882D2-2063-49D0-8DED-CA3F667438E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D0882D2-2063-49D0-8DED-CA3F667438E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D0882D2-2063-49D0-8DED-CA3F667438E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E65B19FB-6BBC-4C38-9D20-7E5E0BBA311C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E65B19FB-6BBC-4C38-9D20-7E5E0BBA311C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E65B19FB-6BBC-4C38-9D20-7E5E0BBA311C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E65B19FB-6BBC-4C38-9D20-7E5E0BBA311C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
