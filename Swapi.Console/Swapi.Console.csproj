@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="9.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Swapi.Domain\Swapi.Domain.csproj" />
+      <ProjectReference Include="..\Swapi.Integration.Impl\Swapi.Integration.Impl.csproj" />
+      <ProjectReference Include="..\Swapi.Integration.Spec\Swapi.Integration.Spec.csproj" />
+    </ItemGroup>
+
+</Project>
