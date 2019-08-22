@@ -4,10 +4,8 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using AutoMapper;
-using Swapi.Integration.Spec;
-using Starship = Swapi.Domain.Starship;
 
-namespace Swapi.Integration.Impl
+namespace Swapi.Core
 {
     public class SwapiGateway : ISwapiGateway
     {
@@ -25,7 +23,7 @@ namespace Swapi.Integration.Impl
 
         public async Task<IEnumerable<Starship>> GetStarshipsAsync()
         {
-            var starships = new List<Spec.Starship>();
+            var starships = new List<StarshipResponse>();
 
             await GetAllPagesAsync("starships", starships);
 
@@ -36,7 +34,7 @@ namespace Swapi.Integration.Impl
         {
             var response = await HttpClient.GetAsync($"{requestUri}");
             response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadAsAsync<ListWrapper<T>>();
+            var data = await response.Content.ReadAsAsync<ListWrapperResponse<T>>();
 
             list.AddRange(data.Results);
 

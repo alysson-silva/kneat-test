@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Swapi.Integration.Spec
+namespace Swapi.Core
 {
     public interface ISwapiGateway
     {
-        Task<IEnumerable<Domain.Starship>> GetStarshipsAsync();
+        Task<IEnumerable<Starship>> GetStarshipsAsync();
     }
 }

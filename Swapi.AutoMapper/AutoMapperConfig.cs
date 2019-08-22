@@ -1,5 +1,5 @@
 using AutoMapper;
-using Swapi.CrossCutting.AutoMapper.Profiles;
+using Swapi.CrossCutting.Profiles;
 
 namespace Swapi.CrossCutting
 {
@@ -9,7 +9,6 @@ namespace Swapi.CrossCutting
         {
             var configuration = new MapperConfiguration(cfg =>
             {
-                cfg.AddProfile<ListWrapperProfile>();
                 cfg.AddProfile<StarshipProfile>();
                 cfg.Advanced.AllowAdditiveTypeMapCreation = true;
             });

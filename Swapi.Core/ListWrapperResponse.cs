@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace Swapi.Integration.Spec
+namespace Swapi.Core
 {
-    public class ListWrapper<T> where T : class
+    public class ListWrapperResponse<T> where T : class
     {
         public long Count { get; set; }
         public string Next { get; set; }

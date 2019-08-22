@@ -1,6 +1,6 @@
-﻿namespace Swapi.Integration.Spec
+﻿namespace Swapi.Core
 {
-    public class Starship
+    public class StarshipResponse
     {
         public string Name { get; set; }
         public string Mglt { get; set; }

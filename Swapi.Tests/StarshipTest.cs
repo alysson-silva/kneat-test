@@ -1,6 +1,6 @@
 using System;
 using System.ComponentModel;
-using Swapi.Domain;
+using Swapi.Core;
 using Xunit;
 
 namespace Swapi.Tests

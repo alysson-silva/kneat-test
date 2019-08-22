@@ -7,13 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swapi.Console", "Swapi.Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.Tests", "Swapi.Tests\Swapi.Tests.csproj", "{1C203B5D-FC0B-495A-AED2-7AD258CEAEB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.Domain", "Swapi.Domain\Swapi.Domain.csproj", "{FD727078-52F0-474A-AF44-AE84C6CF3B37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.Core", "Swapi.Core\Swapi.Core.csproj", "{5D0882D2-2063-49D0-8DED-CA3F667438E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.Integration.Spec", "Swapi.Integration.Spec\Swapi.Integration.Spec.csproj", "{E1E6F5B2-0445-4348-96C6-BD9431D92C67}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.Integration.Impl", "Swapi.Integration.Impl\Swapi.Integration.Impl.csproj", "{5D0882D2-2063-49D0-8DED-CA3F667438E7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.CrossCutting", "Swapi.CrossCutting\Swapi.CrossCutting.csproj", "{E65B19FB-6BBC-4C38-9D20-7E5E0BBA311C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.AutoMapper", "Swapi.AutoMapper\Swapi.AutoMapper.csproj", "{E65B19FB-6BBC-4C38-9D20-7E5E0BBA311C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +25,6 @@ Global
 		{1C203B5D-FC0B-495A-AED2-7AD258CEAEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C203B5D-FC0B-495A-AED2-7AD258CEAEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C203B5D-FC0B-495A-AED2-7AD258CEAEB9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD727078-52F0-474A-AF44-AE84C6CF3B37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD727078-52F0-474A-AF44-AE84C6CF3B37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD727078-52F0-474A-AF44-AE84C6CF3B37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD727078-52F0-474A-AF44-AE84C6CF3B37}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1E6F5B2-0445-4348-96C6-BD9431D92C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1E6F5B2-0445-4348-96C6-BD9431D92C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1E6F5B2-0445-4348-96C6-BD9431D92C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1E6F5B2-0445-4348-96C6-BD9431D92C67}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D0882D2-2063-49D0-8DED-CA3F667438E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5D0882D2-2063-49D0-8DED-CA3F667438E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D0882D2-2063-49D0-8DED-CA3F667438E7}.Release|Any CPU.ActiveCfg = Release|Any CPU

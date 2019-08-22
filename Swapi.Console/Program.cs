@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
+using Swapi.Core;
 using Swapi.CrossCutting;
-using Swapi.Integration.Impl;
-using Swapi.Integration.Spec;
 
 namespace Swapi.Console
 {
@@ -13,10 +12,7 @@ namespace Swapi.Console
 
             var starships = await swapiGateway.GetStarshipsAsync();
 
-            if (args.Length != 1 || !long.TryParse(args[0], out var distanceInMglu))
-            {
-                distanceInMglu = 1_000_000L;
-            }
+            if (args.Length != 1 || !long.TryParse(args[0], out var distanceInMglu)) distanceInMglu = 1_000_000L;
 
             foreach (var starship in starships)
             {

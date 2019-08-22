@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Swapi.Domain
+namespace Swapi.Core
 {
     public class Starship
     {
@@ -11,9 +11,7 @@ namespace Swapi.Domain
         public long? AmmountOfStops(long distanceInMglt)
         {
             if (!Mglt.HasValue || Mglt == 0 || Consumables.GetValueOrDefault(TimeSpan.Zero) == TimeSpan.Zero)
-            {
                 return null;
-            }
 
             return (long?) (distanceInMglt / Mglt / Consumables.GetValueOrDefault().TotalHours);
         }

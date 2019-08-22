@@ -7,9 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Swapi.CrossCutting\Swapi.CrossCutting.csproj" />
+      <ProjectReference Include="..\Swapi.AutoMapper\Swapi.AutoMapper.csproj" />
+      <ProjectReference Include="..\Swapi.Core\Swapi.Core.csproj" />
       <ProjectReference Include="..\Swapi.Domain\Swapi.Domain.csproj" />
-      <ProjectReference Include="..\Swapi.Integration.Impl\Swapi.Integration.Impl.csproj" />
       <ProjectReference Include="..\Swapi.Integration.Spec\Swapi.Integration.Spec.csproj" />
     </ItemGroup>
 

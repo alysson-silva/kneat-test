@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Swapi.Core;
 using Swapi.CrossCutting;
-using Swapi.Integration.Spec;
 using Xunit;
 
 namespace Swapi.Tests
@@ -18,9 +18,15 @@ namespace Swapi.Tests
             new object[] {"Invalid MGLT", "1 day", "unknown", "Invalid MGLT", TimeSpan.FromDays(1d), null}
         };
 
-        public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
+        public IEnumerator<object[]> GetEnumerator()
+        {
+            return _data.GetEnumerator();
+        }
 
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 
     public class StarshipMapTest
@@ -30,7 +36,7 @@ namespace Swapi.Tests
         public void StarshipMapping_IsValid(string actualName, string actualConsumables,
             string actualMglt, string expectedName, TimeSpan? expectedConsumables, long? expectedMglt)
         {
-            var integrationStarship = new Starship
+            var integrationStarship = new StarshipResponse
             {
                 Name = actualName,
                 Consumables = actualConsumables,
@@ -38,9 +44,9 @@ namespace Swapi.Tests
             };
 
             var mapper = AutoMapperConfig.Config();
-            var actual = mapper.Map<Domain.Starship>(integrationStarship);
+            var actual = mapper.Map<Starship>(integrationStarship);
 
-            var expected = new Domain.Starship
+            var expected = new Starship
             {
                 Name = expectedName,
                 Consumables = expectedConsumables,

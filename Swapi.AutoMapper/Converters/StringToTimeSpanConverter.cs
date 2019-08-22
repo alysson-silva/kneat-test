@@ -2,25 +2,29 @@ using System;
 using System.Linq;
 using AutoMapper;
 
-namespace Swapi.CrossCutting.AutoMapper.Converters
+namespace Swapi.CrossCutting.Converters
 {
     public class StringToTimeSpanConverter : ITypeConverter<string, TimeSpan?>
     {
         public TimeSpan? Convert(string source, TimeSpan? destination, ResolutionContext context)
         {
-            if ("unknown".Equals(source))
-            {
-                return null;
-            }
+            if ("unknown".Equals(source)) return null;
 
             var number = long.Parse(source.Split(" ").First());
             var range = source.Split(" ").Last();
+
             return ToTimeSpanFunction(range)(number);
         }
 
-        private static Func<double, TimeSpan> ToTimeSpanFunction(string range)
+        /// <summary>
+        ///     Returns a function capable of creating a new Timespan based on a duration and its unit.
+        /// </summary>
+        /// <param name="unit">A time unit like days, years...</param>
+        /// <returns>A timespan representing the duration.</returns>
+        /// <exception cref="NotImplementedException">Thrown when received an unexpected unit.</exception>
+        private static Func<double, TimeSpan> ToTimeSpanFunction(string unit)
         {
-            switch (range.ToLower())
+            switch (unit.ToLower())
             {
                 case "year":
                 case "years":

@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
+        <RootNamespace>Swapi.CrossCutting</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -9,7 +10,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Swapi.Integration.Impl\Swapi.Integration.Impl.csproj" />
+      <ProjectReference Include="..\Swapi.Core\Swapi.Core.csproj" />
       <ProjectReference Include="..\Swapi.Integration.Spec\Swapi.Integration.Spec.csproj" />
     </ItemGroup>
 
