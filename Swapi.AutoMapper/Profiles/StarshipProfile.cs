@@ -1,10 +1,10 @@
 using System;
 using AutoMapper;
+using Swapi.AutoMapper.Converters;
+using Swapi.AutoMapper.Resolvers;
 using Swapi.Core;
-using Swapi.CrossCutting.Converters;
-using Swapi.CrossCutting.Resolvers;
 
-namespace Swapi.CrossCutting.Profiles
+namespace Swapi.AutoMapper.Profiles
 {
     /// <summary>
     ///     Responsible for mapping all things related to <see cref="Starship" />.

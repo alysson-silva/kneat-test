@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Swapi.AutoMapper;
 using Swapi.Core;
-using Swapi.CrossCutting;
 using Xunit;
 
 namespace Swapi.Tests.UnitTests

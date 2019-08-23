@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
+using Swapi.AutoMapper;
 using Swapi.Core;
-using Swapi.CrossCutting;
 
 namespace Swapi.Console
 {

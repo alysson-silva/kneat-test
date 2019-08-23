@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Swapi.AutoMapper;
 using Swapi.Core;
-using Swapi.CrossCutting;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using Xunit;

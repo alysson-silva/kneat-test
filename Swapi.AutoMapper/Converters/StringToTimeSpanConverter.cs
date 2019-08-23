@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using AutoMapper;
 
-namespace Swapi.CrossCutting.Converters
+namespace Swapi.AutoMapper.Converters
 {
     /// <summary>
     ///     Converts a String to a TimeSpan. Returns null if the string is "unknown".

@@ -1,7 +1,7 @@
 using AutoMapper;
 using Swapi.Core;
 
-namespace Swapi.CrossCutting.Resolvers
+namespace Swapi.AutoMapper.Resolvers
 {
     /// <summary>
     ///     Parses numbers and converts them to long. Returns null if the string is "unknown".

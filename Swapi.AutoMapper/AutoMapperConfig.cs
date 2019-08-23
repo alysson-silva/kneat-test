@@ -1,7 +1,7 @@
 using AutoMapper;
-using Swapi.CrossCutting.Profiles;
+using Swapi.AutoMapper.Profiles;
 
-namespace Swapi.CrossCutting
+namespace Swapi.AutoMapper
 {
     /// <summary>
     ///     AutoMapper initialization
