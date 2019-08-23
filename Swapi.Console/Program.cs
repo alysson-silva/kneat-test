@@ -23,6 +23,8 @@ namespace Swapi.Console
 
             foreach (var starship in starships)
                 System.Console.WriteLine("{0, -30}{1, 10}", starship.Name, starship.Stops);
+
+            System.Console.ReadLine();
         }
     }
 }
