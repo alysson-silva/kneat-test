@@ -5,7 +5,7 @@ using Swapi.Core;
 using Swapi.CrossCutting;
 using Xunit;
 
-namespace Swapi.Tests
+namespace Swapi.Tests.UnitTests
 {
     public class StarshipDataGenerator : IEnumerable<object[]>
     {

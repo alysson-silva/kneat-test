@@ -6,6 +6,9 @@ using Swapi.CrossCutting.Resolvers;
 
 namespace Swapi.CrossCutting.Profiles
 {
+    /// <summary>
+    ///     Responsible for mapping all things related to <see cref="Starship" />.
+    /// </summary>
     public class StarshipProfile : Profile
     {
         public StarshipProfile()

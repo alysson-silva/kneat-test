@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Swapi.Core;
 using Xunit;
 
-namespace Swapi.Tests
+namespace Swapi.Tests.UnitTests
 {
     public class StarshipTest
     {

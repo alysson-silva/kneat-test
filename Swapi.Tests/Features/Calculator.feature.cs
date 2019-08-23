@@ -8,138 +8,125 @@
 //      the code is regenerated.
 //  </auto-generated>
 // ------------------------------------------------------------------------------
-
 #region Designer generated code
-
-using TechTalk.SpecFlow;
-
 #pragma warning disable
 namespace Swapi.Tests.Features
 {
+    using TechTalk.SpecFlow;
+    
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class ResupplyCalculatorFeature : Xunit.IClassFixture<ResupplyCalculatorFeature.FixtureData>,
-        System.IDisposable
+    public partial class ResupplyCalculatorFeature : Xunit.IClassFixture<ResupplyCalculatorFeature.FixtureData>, System.IDisposable
     {
-        public ResupplyCalculatorFeature(ResupplyCalculatorFeature.FixtureData fixtureData,
-            Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        
+        private static TechTalk.SpecFlow.ITestRunner testRunner;
+        
+        private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
+        
+#line 1 "Calculator.feature"
+#line hidden
+        
+        public ResupplyCalculatorFeature(ResupplyCalculatorFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
         }
-
-        void System.IDisposable.Dispose()
-        {
-            this.ScenarioTearDown();
-        }
-
-        private static TechTalk.SpecFlow.ITestRunner testRunner;
-
-        private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
-
+        
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(
-                new System.Globalization.CultureInfo("en-US"), "Resupply calculator",
-                "  As a spaceship captain, in order to avoid mutiny\r\n  I need to know how many tim" +
-                "es I need to stop\r\n  and resupply my ship before my crew starves to death.",
-                ProgrammingLanguage.CSharp, ((string[]) (null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Resupply calculator", "  As a spaceship captain, in order to avoid mutiny\r\n  I need to know how many tim" +
+                    "es I need to stop\r\n  and resupply my ship before my crew starves to death.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
-
+        
         public static void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
-
+        
         public virtual void TestInitialize()
         {
         }
-
+        
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
         }
-
+        
         public virtual void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo);
-            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Xunit.Abstractions.ITestOutputHelper>(
-                _testOutputHelper);
+            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Xunit.Abstractions.ITestOutputHelper>(_testOutputHelper);
         }
-
+        
         public virtual void ScenarioStart()
         {
             testRunner.OnScenarioStart();
         }
-
+        
         public virtual void ScenarioCleanup()
         {
             testRunner.CollectScenarioErrors();
         }
-
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
-        [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        public class FixtureData : System.IDisposable
+        
+        void System.IDisposable.Dispose()
         {
-            public FixtureData()
-            {
-                FeatureSetup();
-            }
-
-            void System.IDisposable.Dispose()
-            {
-                FeatureTearDown();
-            }
+            this.ScenarioTearDown();
         }
-
-        [Xunit.FactAttribute(DisplayName = "Listing of all starships and their number of stops necessary")]
+        
+        [Xunit.FactAttribute(DisplayName="Listing of all starships and their number of stops necessary")]
         [Xunit.TraitAttribute("FeatureTitle", "Resupply calculator")]
         [Xunit.TraitAttribute("Description", "Listing of all starships and their number of stops necessary")]
         public virtual void ListingOfAllStarshipsAndTheirNumberOfStopsNecessary()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo =
-                new TechTalk.SpecFlow.ScenarioInfo("Listing of all starships and their number of stops necessary", null,
-                    ((string[]) (null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Listing of all starships and their number of stops necessary", null, ((string[])(null)));
 #line 6
-            this.ScenarioInitialize(scenarioInfo);
+  this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
-            testRunner.Given("I have a desire to know how many stops all starships have to make in a flight of " +
-                             "1000000 MGLT", ((string) (null)), ((TechTalk.SpecFlow.Table) (null)), "Given ");
+    testRunner.Given("I have a desire to know how many stops all starships have to make in a flight of " +
+                    "1000000 MGLT", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-            testRunner.When("I press enter", ((string) (null)), ((TechTalk.SpecFlow.Table) (null)), "When ");
+    testRunner.When("I press enter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[]
-            {
-                "Name",
-                "Stops"
-            });
-            table1.AddRow(new string[]
-            {
-                "Millennium Falcon",
-                "9"
-            });
-            table1.AddRow(new string[]
-            {
-                "Y-wing",
-                "74"
-            });
-            table1.AddRow(new string[]
-            {
-                "Rebel transport",
-                "11"
-            });
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Name",
+                        "Stops"});
+            table1.AddRow(new string[] {
+                        "Millennium Falcon",
+                        "9"});
+            table1.AddRow(new string[] {
+                        "Y-wing",
+                        "74"});
+            table1.AddRow(new string[] {
+                        "Rebel transport",
+                        "11"});
 #line 9
-            testRunner.Then("the calculator must list all spaceships and their number of stops before depletin" +
-                            "g all consumables like this:", ((string) (null)), table1, "Then ");
+    testRunner.Then("the calculator must list all spaceships and their number of stops before depletin" +
+                    "g all consumables like this:", ((string)(null)), table1, "Then ");
 #line hidden
             this.ScenarioCleanup();
+        }
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
+        [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        public class FixtureData : System.IDisposable
+        {
+            
+            public FixtureData()
+            {
+                ResupplyCalculatorFeature.FeatureSetup();
+            }
+            
+            void System.IDisposable.Dispose()
+            {
+                ResupplyCalculatorFeature.FeatureTearDown();
+            }
         }
     }
 }
 #pragma warning restore
-
 #endregion

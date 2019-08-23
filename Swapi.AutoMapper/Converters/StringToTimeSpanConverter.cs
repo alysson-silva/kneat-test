@@ -4,6 +4,9 @@ using AutoMapper;
 
 namespace Swapi.CrossCutting.Converters
 {
+    /// <summary>
+    ///     Converts a String to a TimeSpan. Returns null if the string is "unknown".
+    /// </summary>
     public class StringToTimeSpanConverter : ITypeConverter<string, TimeSpan?>
     {
         public TimeSpan? Convert(string source, TimeSpan? destination, ResolutionContext context)

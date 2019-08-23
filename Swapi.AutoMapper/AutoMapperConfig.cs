@@ -3,6 +3,9 @@ using Swapi.CrossCutting.Profiles;
 
 namespace Swapi.CrossCutting
 {
+    /// <summary>
+    ///     AutoMapper initialization
+    /// </summary>
     public static class AutoMapperConfig
     {
         public static IMapper Config()
